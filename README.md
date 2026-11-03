@@ -37,13 +37,13 @@ The script performs the computational experiment using four different learning r
 - 0.3
 - 0.8
 
-It tracks the loss over successive training iterations and produces a comparison of the learning behaviour for each learning rate.
+It tracks the half squared-error loss over 1,000 training iterations and produces a plot comparing the learning behaviour for each learning rate.
 
 ## Reproducibility
 
-The code is provided to allow readers to reproduce the computational experiment and explore how different learning rates affect the training process.
+The experiment uses a fixed network structure, one input-target example and a specified set of initial weights. This allows readers to reproduce the results and explore how different learning rates and parameter values affect the training process.
 
-Readers can also modify the initial parameters and experiment settings to investigate their effects on the network's behaviour.
+Readers can modify the initial parameters and experiment settings to investigate their effects on the network's behaviour.
 
 ## Author
 
