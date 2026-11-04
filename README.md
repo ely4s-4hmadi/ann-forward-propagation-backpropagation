@@ -65,11 +65,6 @@ The computational experiment uses one fixed input-target pair and a small neural
 
 Ahmadi, M. E. (2026). *A Mathematical Exposition of Forward Propagation and Backpropagation in Artificial Neural Networks*. Version 1.0. Independent mathematical exposition.
 
-## Author
-
-Elyas Ahmadi  
-Computer Science, University of Liverpool
-
 ## Code availability
 
 Repository: https://github.com/ely4s-4hmadi/ann-forward-propagation-backpropagation
