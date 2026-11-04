@@ -1,0 +1,40 @@
+{
+  "python_version": "3.13.7",
+  "numpy_version": "2.5.4",
+  "matplotlib_version": "3.11.2",
+  "network": "2-2-1 sigmoid, no biases",
+  "weight_order": [
+    "w1",
+    "w2",
+    "w3",
+    "w4",
+    "w5",
+    "w6"
+  ],
+  "initial_weights": [
+    0.1,
+    0.4,
+    0.8,
+    0.6,
+    0.3,
+    0.9
+  ],
+  "inputs": [
+    0.35,
+    0.9
+  ],
+  "target": 0.8,
+  "loss": "0.5*(target-output)**2",
+  "learning_rates": [
+    0.01,
+    0.1,
+    0.3,
+    0.8
+  ],
+  "updates_per_run": 1000,
+  "gradient_check_epsilon": 1e-05,
+  "arithmetic": "numpy.float64 / Python double-precision floating point",
+  "random_seed": null,
+  "randomness": "none: all inputs and initial weights are fixed",
+  "trajectory_includes_iteration_zero": true
+}
