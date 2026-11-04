@@ -1,51 +1,75 @@
-# Artificial Neural Networks: Forward Propagation and Backpropagation
+# A Mathematical Exposition of Forward Propagation and Backpropagation in Artificial Neural Networks
 
-This repository contains the Python code used for the computational experiment in my paper, *A Mathematical Exposition of Forward Propagation and Backpropagation in Artificial Neural Networks*.
+**Author:** Mohammad Elyas Ahmadi  
+**Affiliation:** School of Computer Science and Informatics, University of Liverpool  
+**Version:** 1.0 — November 2026
 
-The experiment explores how a small feedforward neural network learns through forward propagation, backpropagation and gradient descent.
+## Overview
 
-## Contents
+This repository accompanies the mathematical exposition *A Mathematical Exposition of Forward Propagation and Backpropagation in Artificial Neural Networks*.
 
-- `ComputationalExperiment.py` — implements the neural network and compares different learning rates.
+It provides a reproducible Python implementation of a feedforward neural network with two input neurons, two hidden neurons and one output neuron.
+
+The implementation demonstrates forward propagation, analytical gradient calculation through backpropagation, gradient descent, numerical gradient verification using central finite differences, and the effects of different learning rates.
+
+## Experimental configuration
+
+- Network architecture: 2–2–1
+- Activation function: Sigmoid
+- Loss function: Half squared error
+- Inputs: 0.35 and 0.9
+- Target output: 0.8
+- Initial weights: [0.1, 0.4, 0.8, 0.6, 0.3, 0.9]
+- Learning rates: 0.01, 0.1, 0.3 and 0.8
+- Training iterations: 1,000
+- Numerical gradient-checking step: 0.00001
+
+Biases are omitted from the numerical network to keep the mathematical derivations accessible.
 
 ## Requirements
 
-- Python 3
-- NumPy
-- Matplotlib
+Python 3 with NumPy and Matplotlib.
 
-## Installation
-
-Install the required libraries using:
+Install the dependencies:
 
 ```bash
-py -m pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
-## Running the Experiment
+## Reproducing the experiments
 
-Run the following command from the repository directory:
+Run:
 
 ```bash
-py ComputationalExperiment.py
+python ComputationalExperiment.py
 ```
 
-The script performs the computational experiment using four different learning rates:
+The script calculates the numerical example, verifies the analytical gradients, compares the four learning rates, and saves the results and figures to the `ann_results` directory.
 
-- 0.01
-- 0.1
-- 0.3
-- 0.8
+## Generated outputs
 
-It tracks the half squared-error loss over 1,000 training iterations and produces a plot comparing the learning behaviour for each learning rate.
+- **Figure 12:** Loss before and after one gradient-descent update.
+- **Figure 13:** Loss trajectories for four learning rates.
+- **Figure 14:** Absolute prediction error after training.
+- **gradient_check.csv:** Comparison of analytical and numerical gradients.
+- **learning_rate_summary.csv:** Final outputs and losses for each learning rate.
+- **loss_trajectories.csv:** Loss recorded throughout training.
+- **single_step.csv:** Numerical results for the single-step update.
+- **experiment_metadata.json:** Experimental configuration and software information.
 
-## Reproducibility
+## Scope and limitations
 
-The experiment uses a fixed network structure, one input-target example and a specified set of initial weights. This allows readers to reproduce the results and explore how different learning rates and parameter values affect the training process.
+The computational experiment uses one fixed input-target pair and a small neural network without biases. It is intended to illustrate the mathematical behaviour of gradient-based learning rather than establish general performance across datasets or architectures.
 
-Readers can modify the initial parameters and experiment settings to investigate their effects on the network's behaviour.
+## Citation
+
+Ahmadi, M. E. (2026). *A Mathematical Exposition of Forward Propagation and Backpropagation in Artificial Neural Networks*. Version 1.0. Independent mathematical exposition.
 
 ## Author
 
 Elyas Ahmadi  
 Computer Science, University of Liverpool
+
+## Code availability
+
+Repository: https://github.com/ely4s-4hmadi/ann-forward-propagation-backpropagation
