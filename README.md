@@ -191,7 +191,6 @@ $$
 \approx
 \frac{
 L(\mathbf{w}+\varepsilon\mathbf{e}_i)
--
 L(\mathbf{w}-\varepsilon\mathbf{e}_i)
 }{
 2\varepsilon
