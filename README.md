@@ -184,19 +184,30 @@ These files allow readers to examine the underlying numerical values independent
 
 To assess the correctness of the analytical backpropagation gradients, the extended implementation uses central finite differences.
 
-For a weight \(w_i\), the numerical gradient is approximated by:
+For a weight $w_i$, the numerical gradient is approximated by:
 
-\[
+$$
 \frac{\partial L}{\partial w_i}
 \approx
-\frac{L(\mathbf{w}+\varepsilon\mathbf{e}_i)-L(\mathbf{w}-\varepsilon\mathbf{e}_i)}{2\varepsilon},
-\]
+\frac{
+L(\mathbf{w}+\varepsilon\mathbf{e}_i)
+-
+L(\mathbf{w}-\varepsilon\mathbf{e}_i)
+}{
+2\varepsilon
+}
+$$
 
-where \(\varepsilon=10^{-5}\), and \(\mathbf{e}_i\) is the unit vector corresponding to weight \(w_i\).
+where:
 
-The numerical gradients are compared with the analytical gradients obtained through backpropagation.
+- $\varepsilon = 10^{-5}$ is the small perturbation used in the finite-difference approximation.
+- $\mathbf{w}$ is the vector of network weights.
+- $\mathbf{e}_i$ is the unit vector corresponding to weight $w_i$.
+- $L$ represents the loss function.
 
-For the selected initial weight configuration, the absolute differences are on the order of \(10^{-13}\) to \(10^{-14}\), supporting the correctness of the implemented analytical derivatives.
+The numerical gradients are compared with the **analytical gradients** obtained through backpropagation.
+
+For the selected initial weight configuration, the absolute differences are on the order of $10^{-13}$ to $10^{-14}$, supporting the correctness of the implemented analytical derivatives.
 
 ## Scope and Limitations
 
